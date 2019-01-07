@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Adventure</title>
+  </head>
+  <body>
+    <div id="scene">
+      <div id="situation">
+        <p class='type1'>
+                Will you go towards the House 
+        </p>
+        <p class='type2'>or Deeper into
+                the Forest?</p>
+      </div>
+      <div class="button-container">
+        <button>HOUSE</button> 
+        <button>FOREST</button>
+      </div>
+    </div>
+
+    <style>
+      body {
+        font-size: 20px;
+        background-color: black;
+        color: white;
+      }
+      button {
+        background-color: rgba(240, 240, 17, 0.4);
+        border:none;
+        color:white;
+        padding:20px;
+      }
+      button:hover {
+          cursor: pointer;
+          background-color: rgba(240, 240, 17, 0.8);
+      }
+
+      .button-container {
+          position: relative;
+          display:flex;
+          flex-direction: row;
+          justify-content: space-around;
+          top:80%;
+          left:50%;
+          transform: translate(-50%,-50%);
+          padding:20px;
+
+      }
+      h1 {
+        position: absolute;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%, -50%);
+      }
+      #situation {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        top: 325px;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 40px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 30px;
+        
+      }
+      .type1 {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        white-space: nowrap; /* Keeps content on a single line */
+
+        animation: 
+        typing 5s steps(40, end),
+        blink-caret .75s step-end infinite;
+
+      }
+      .type2 {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        white-space: nowrap; /* Keeps content on a single line */
+
+        animation: 
+        typing 10s steps(40, end),
+        blink-caret .75s step-end infinite;
+      }
+
+      #scene {
+        background-image: url("scene2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: fixed;
+        background-attachment: scroll;
+        background-position: 50% 50%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        content: "";
+        z-index: 0;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      a:hover {
+        cursor: pointer;
+      }
+
+
+
+
+      @keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+    </style>
+  </body>
+</html>
