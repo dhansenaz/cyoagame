@@ -9,7 +9,7 @@
   <body>
     <div id="scene">
             <div id="overlay"></div>
-        <img class='lamp' src='lamp.png'>
+                <a href='lamp.html' id='lamp-hover'><img class='lamp' src='lamp.png'></a>
             
         
       <div id="container">
@@ -45,6 +45,15 @@
           width:40px;
           opacity: .4;
       }
+
+      .lamp:hover {
+          /* opacity: .8; */
+          animation:fadeInLamp 3s;
+      }
+      .lamp-hover:hover {
+          cursor: pointer;
+      }
+
       #overlay{
         z-index: -2;
         position: absolute;
@@ -136,6 +145,22 @@
   }
   100% {
       opacity: 1.0;
+  }
+}
+@keyframes fadeInLamp {
+  0% {
+      opacity: 0.4;
+  }
+  100% {
+      opacity: 1.0;
+  }
+}
+@keyframes fadeInGlow {
+  0% {
+      opacity: 0.1;
+  }
+  100% {
+      opacity: .6;
   }
 }
 
