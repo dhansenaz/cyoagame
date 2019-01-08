@@ -10,18 +10,21 @@
     <div id="scene">
             <div id="overlay"></div>
                 <a href='lamp.html' id='lamp-hover'><img class='lamp' src='lamp.png'></a>
+                <div class='modal-wrapper'>
+                <div id='forestModal' class='modal'>
+                    <div class='modal-content'>
+                        <span class='close'>&times</span>
+                        <p>YAY!!! Now you can see your way through the forest. Use the lamp to help you get to the next level.</p>
+                    </div>
+                </div>
+            </div>
             
         
       <div id="container">
-        <!-- <div class="text-wrapper">
-          <p class="type1">
-            Go inside or back to forest?
-          </p>
-        </div> -->
 
         <div class="button-container">
-                    <button><a href='house.html'>INSIDE</a></button> 
-                    <button href='forest.html'>FOREST</button>
+                    <button id='forestButton'>GET LAMP</button> 
+                    <!-- <button href='forest.html'>FOREST</button> -->
                 
               </div>
 
@@ -37,6 +40,43 @@
         margin: 0;
         padding: 0;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .modal-wrapper {
+          display:flex;
+          margin-top:200px;
+          flex-direction: column;
+          align-items:center;
+          justify-content: center;
+          width:100vw;
+          height: 250px;
+
+      }
+      .modal {
+          display: none;
+          z-index: 1;
+          text-align: center;
+      }
+      .modal-content {
+          position: absolute;
+          top:50%;
+          left:50%;
+          transform: translate(-50%,-50%);
+          padding:20px;
+          border:1px solid #888;
+          max-width:50%;
+         
+      }
+      .close {
+          color:#aaa;
+          float:right;
+          font-size: 28px;
+          font-weight: bold;
+      }
+      .close:hover, 
+      .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
       }
       .lamp {
           position: absolute;
@@ -78,7 +118,7 @@
       }
 
       .button-container {
-        margin-top:40px;
+        margin-top:100px;
         display: flex;
         flex-direction:row;
         justify-content: space-around;
@@ -94,7 +134,7 @@
      
       #container {
         width: 100%;
-        height: 100vh;
+        /* height: 100vh; */
         display: flex;
         flex-direction:column;
         justify-content: center;
@@ -180,5 +220,8 @@
   }
 }
     </style>
+
+<script src='main.js'></script>
+    
   </body>
 </html>
