@@ -9,13 +9,13 @@
   <body>
     <div id="scene">
             <div id="overlay"></div>
-                <a href='lamp.html' id='lamp-hover'><img class='lamp' src='lamp.png'></a>
+                <a href='lamp.html' id='piano-hover'><img class='piano' src='piano.png'></a>
                 <div class='modal-wrapper'>
                 <div id='forestModal' class='modal'>
                     <div class='modal-content'>
                         <span class='close'>&times</span>
-                        <p>YAY!!! Now you can see your way through the forest. Use the lamp to help you get to the next level.</p>
-                        <a href='lamp.html'><button>USE LAMP</button></a>
+                        <p>Hmmmm..... Sounds like you may need some more practice. You have awakened the butler.</p>
+                        <a href='lamp.html'><button>RUN</button></a>
                       </div>
                 </div>
             </div>
@@ -24,7 +24,7 @@
       <div id="container">
 
         <div id='buttons'class="button-container">
-                    <button id='forestButton'>GET LAMP</button> 
+                    <button id='forestButton'>PLAY PIANO</button> 
                 
               </div>
 
@@ -80,21 +80,21 @@
           text-decoration: none;
           cursor: pointer;
       }
-      .lamp {
+      .piano {
           position: absolute;
-          left:80%;
-          top:55%;
-          width:40px;
-          opacity: .3;
+          left:25%;
+          top:50%;
+          width:350px;
+          opacity: .4;
           transition: all 1500ms ease-in-out; 
       }
 
-      .lamp:hover {
-          opacity: .8;
+      .piano:hover {
+          opacity: .7;
           transition: all 1000ms ease-in-out; 
           
       }
-      .lamp-hover:hover {
+      .piano-hover:hover {
           cursor: pointer;
       }
 
