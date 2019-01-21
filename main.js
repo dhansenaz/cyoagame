@@ -1,3 +1,4 @@
+
 // MODAL OPEN AND CLOSE
 
 let modal = document.getElementById('forestModal');
