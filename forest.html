@@ -9,7 +9,7 @@
   <body>
     <div id="scene">
       <div id="overlay"></div>
-      <a href="lamp.html" id="lamp-hover"><img class="lamp" src="/img/lamp.png"/></a>
+      <a href="lamp.html" id="lamp-hover"><img class="lamp" src="/img/lamp.png" draggable="true"/></a>
       <div class="modal-wrapper">
         <div id="forestModal" class="modal">
           <div class="modal-content">
@@ -54,6 +54,7 @@
         display: none;
         z-index: 1;
         text-align: center;
+        animation: fadeIn 5s;
       }
       .modal-content {
         position: absolute;
@@ -84,11 +85,14 @@
         width: 40px;
         opacity: 0.3;
         transition: all 1500ms ease-in-out;
+        animation:fadeIn 5s;
+        animation:fadeOut 7s;
+        
       }
 
       .lamp:hover {
         opacity: 0.8;
-        transition: all 1000ms ease-in-out;
+        animation:fadeInGlow 5s;
       }
       .lamp-hover:hover {
         cursor: pointer;
@@ -123,7 +127,7 @@
       }
 
       .button-container {
-        margin-top: 100px;
+        margin-top: 10px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -194,6 +198,14 @@
           opacity: 1;
         }
       }
+      @keyframes fadeOut {
+        100% {
+          opacity: 1;
+        }
+        100% {
+          opacity: .1;
+        }
+      }
       @keyframes fadeInLamp {
         0% {
           opacity: 0.4;
@@ -204,10 +216,10 @@
       }
       @keyframes fadeInGlow {
         0% {
-          opacity: 0.1;
+          opacity: 0.3;
         }
         100% {
-          opacity: 0.6;
+          opacity: 0.8;
         }
       }
 

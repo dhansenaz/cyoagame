@@ -54,6 +54,7 @@
         display: none;
         z-index: 1;
         text-align: center;
+        animation:fadeIn 5s;
       }
       .modal-content {
         position: absolute;
@@ -108,14 +109,18 @@
         border: none;
         color: white;
         padding: 20px;
+        transition:ease-in-out 1s;
+        
       }
       button:hover {
         cursor: pointer;
         background-color: rgb(51, 131, 165, 0.8);
+        transition:ease-in-out 1s;
+        
       }
 
       .button-container {
-        margin-top: 100px;
+        margin-top: 10px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
