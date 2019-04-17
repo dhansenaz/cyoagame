@@ -12,12 +12,13 @@
       <div class="cloud"></div>
       <div id="overlay"></div>
       <!-- <img id="logo" src="img/gotdragonegg.png" /> -->
-      <div class='egg-container'>
-        <img src='img/gotdragonegg.png' class='egg'>
-        <img src='img/gotdragonegg.png' class='egg'>
-        <img src='img/gotdragonegg.png' class='egg'>
-      </div>
+      
       <div id="container">
+          <div class='egg-container'>
+              <img src='img/gotdragonegg.png' class='egg'>
+              <img src='img/gotdragonegg.png' class='egg'>
+              <img src='img/gotdragonegg.png' class='egg'>
+            </div>
         <div class="button-container">
           <button><a href="chose_start.html">START</a></button>
         </div>
@@ -36,18 +37,23 @@
       }
       .egg-container {
         display:flex;
-        max-width: 600px;
         flex-direction: row;
-        margin:0 auto;
-        justify-content: center;
+        width:800px;
         align-items: center;
+        justify-content: space-around;
+        padding:25px;
       }
       .egg {
-        width: 200px;
-        filter: grayscale(0.9);
-        opacity: 0.5;
+        width: 100px;
+        opacity: 0.7;
+        transition: ease-in-out 1s;
       }
-      .cloud {
+      .egg:hover {
+        cursor: pointer;
+        transition: ease-in-out 1s;
+        
+      }
+      /* .cloud {
         z-index: -1;
         position:absolute;
         top:0;
@@ -59,9 +65,9 @@
         background:url('cloud.png');
         animation:animate 180s linear infinite;
         opacity: .3;
-      }
+      } */
 
-      #overlay {
+      /* #overlay {
         z-index: -2;
         position: absolute;
         width: 100%;
@@ -77,7 +83,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 50% 50%;
-      }
+      } */
 
       #logo {
         position: absolute;
@@ -88,6 +94,7 @@
         opacity: 0.5;
       }
       button {
+        /* margin-top:300px; */
         background-color: rgba(255, 72, 0, 0.4);
         border: none;
         color: white;
