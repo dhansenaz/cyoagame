@@ -8,26 +8,21 @@
   </head>
   <body>
     <div id="scene">
-      <!-- <div id="container">
-          <div class="button-container">
-              <button><a href="house.html">HOUSE</a></button>
-              <button><a href="forest.html">FOREST</a></button>
-            </div>
-      </div> -->
+   
       <div class="card-container1">
-        <div class="card1">
-          <img src="img/gotdragonfly3.png" class="choose-dragon3" />
+        <div class="card1"><a href="dragon1.html">
+          <img src="img/gotdragonfly3.png" class="choose-dragon3" /></a>
         </div>
-        <div class="card1">
-          <img src="img/gotdragonfly2.png" class="choose-dragon" />
+        <div class="card1"><a href="dragon2.html">
+          <img src="img/gotdragonfly2.png" class="choose-dragon" /></a>
         </div>
-        <div class="card1">
-          <img src="img/gotdragonfly1.png" class="choose-dragon" />
+        <div class="card1"><a href="dragon3.html">
+          <img src="img/gotdragonfly1.png" class="choose-dragon" /></a>
         </div>
       </div>
       <div class="text-wrapper">
         <p class="type1">
-          choose your dragon
+         CHOOSE YOUR DRAGON!
         </p>
       </div>
     </div>
@@ -45,11 +40,13 @@
       .card-container1 {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        /* margin:0 auto; */
+        margin:0 auto;
         max-width: 100%;
         justify-content: center;
         grid-gap: 50px;
         margin: 50px;
+        margin-top:100px;
+        
       }
       .card1 {
         display: grid;
@@ -62,6 +59,9 @@
         border-radius: 10px;
         box-shadow: 0 5px 15px rgb(56, 56, 56);
         padding: 10px;
+      }
+      .card1:hover {
+        cursor: pointer;
       }
       .dragon-container {
         /* position: absolute; */
@@ -123,7 +123,7 @@
         overflow: hidden; /* Ensures the content is not revealed until the animation */
         white-space: nowrap; /* Keeps content on a single line */
         align-items: center;
-        animation: typing 3.5s steps(40, end),
+        animation: typing 4.5s steps(40, end),
           blink-caret 0.75s step-end infinite;
       }
       .text-wrapper {
@@ -134,13 +134,13 @@
         text-align: center;
         align-items: center;
         justify-content: center;
-        background-color: rgba(0, 0, 0, 0.3);
+        /* background-color: rgba(0, 0, 0, 0.1); */
       }
       #scene {
         background-image: url("img/gotwall.png");
         background-size: cover;
         background-repeat: no-repeat;
-        position: absolute;
+        position: fixed;
         background-attachment: scroll;
         background-position: 50% 50%;
         top: 0;
@@ -179,6 +179,12 @@
       @media only screen and (max-width: 600px) {
         .type1 {
           font-size: 0.8em;
+        }
+        .choose-dragon{
+          width:100px;
+        }
+        .card-container1 {
+          grid-gap: 40px;
         }
       }
     </style>
